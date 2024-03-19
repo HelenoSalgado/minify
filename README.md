@@ -1,6 +1,5 @@
 # Minifica CSS e JavaScript
-
-*Recomendo clonar esse repositório para receber atualizações com git pull.*
+<hr>
 
 Para tornar o script executável a partir de qualquer diretório, basta torná-lo um executável:
 

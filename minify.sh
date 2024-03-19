@@ -17,7 +17,7 @@ Você precisa passar uma opção válida:\n
     $ minify -r directory/file.css \n
 Obs: '-i' opção só funciona com arquivos especificados: dist/css/header.css.
 \n'
-   exit 0;
+   exit 1;
 fi
 
 # Verifica se o tipo de arquivo a ser minificado está presente.
@@ -108,7 +108,7 @@ minify_js(){
         's/ -=/-=/g' $FILE_TMP;
 }
 
-# Verifica se já existe o mesmo arquivo css minificado. Se sim, apaga.
+# Verifica se já existe o mesmo arquivo minificado. Se sim, apaga.
 verify_file_exist_and_remove(){
     if [ -f $1 ]; then
        rm -rf $1;

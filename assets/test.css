@@ -1,0 +1,205 @@
+/* Folha de estilo global */
+:root{
+    --color-background: #161616;
+    --color-background-soft: #ececec;
+    --color-font: #2e2e2e;
+    --color-link: #a35c00;
+    --color-dark-mode: #ececec;
+    --shadow-color: 214deg 34% 5%;
+    --shadow-elevation-medium:
+      0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.20),
+      0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.20),
+      2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.20),
+      5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.20);
+     --shadow-color: 210deg 22% 2%;
+     --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(241, 241, 241);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(43, 42, 41);
+    border-radius: 20px;
+    border: 1px solid rgb(241, 241, 241);
+}
+body {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(43, 42, 41) rgb(241, 241, 241);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    min-height: 100vh;
+}
+button{
+    font-family: var(--font)
+}
+a{
+    color: var(--color-link);
+    text-decoration: none;
+}
+main, section{
+    position: relative;
+    padding: .5rem 1rem;
+    max-width: 800px;
+    margin: 3rem auto;
+}
+article{
+    color: var(--color-font);
+}
+article p{
+    line-height: 25px;
+    font-size: 1.1rem;
+}
+blockquote{
+    border-left: 2px solid var(--color-link);
+    padding-left: .8rem;
+    background-color: var(--color-background-soft);
+    border-radius: 0 3px 3px 0;
+}
+main img{
+    border-radius: 7px;
+}
+.navigator-posts{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.grid-container {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 2.5rem;
+}
+
+/* Comementário test */
+.title-icon-flex{
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    column-gap: .3rem;
+}
+.post-card, .post-card-related {
+    height: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: var(--shadow-elevation-medium);
+}
+
+.post-card{
+    flex: 1 2 300px;
+}
+
+.post-card-related{
+    flex: 1 2 200px;
+    max-width: 300px;
+}
+.post-card-text, .post-card-related-text{
+    color: var(--color-font);
+    padding: .5rem .5rem 1rem .5rem;
+}
+
+.post-card-text h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+.post-card-related-text{
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem;
+    height: 45px;
+}
+.post-card-related-text h3{
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin: 0;
+}
+
+.post-card-text>p,
+.post-card-text button {
+    font-size: 1rem;
+}
+
+.post-card-text button {
+    color: var(--color-background-soft);
+    width: 110px;
+    height: 40px;
+    background-color: var(--color-background);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: ease-in 150ms;
+    cursor: pointer;
+}
+.post-card-text button:hover{
+    box-shadow: var(--shadow-elevation-medium);
+}
+.post-card-image, .post-card-related-img{
+    width: 100%;
+    object-fit: cover;
+}
+.post-card-image{
+    height: 200px;
+}
+.post-card-related-img{
+    height: 130px;
+}
+.tags {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.tags a {
+    margin-right: 1rem;
+    text-decoration: none;
+    font-style: oblique;
+    color: var(--color-font);
+}
+/* Dark Mode */
+.menu-dark-mode{
+    display: inline-flex;
+    justify-content: center;
+    column-gap: 1rem;
+    color: #ececec;
+}
+.menu-dark-mode svg{
+    cursor: pointer;
+}
+.dark-mode body, .dark-mode .post-card, .dark-mode blockquote {
+    background-color: var(--color-background);
+    color: var(--color-dark-mode);
+}
+.dark-mode .post-card-text button, .dark-mode .slides-circle:hover, .dark-mode .circle-background{
+    background-color: var(--color-dark-mode);
+    color: var(--color-background);
+}
+.dark-mode header{
+    box-shadow: 1px 2px 3px #0000003f;
+}
+.dark-mode article, .dark-mode .article-author a, .dark-mode .post-card-text, .dark-mode .tags a{
+    color: var(--color-dark-mode);
+ }
+.dark-mode article{
+    color: var(--color-dark-soft);
+}
+.dark-mode .shared-buttons svg, .dark-mode .shared-buttons span{
+    color: var(--color-background-soft);
+}
+.dark-mode .slides-circle{
+    border-color: var(--color-background-soft);
+}

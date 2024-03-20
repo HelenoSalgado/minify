@@ -23,20 +23,28 @@ O minify recebe até três opções de modo de operação:
 * -o --output - *Somente ler e mostra a saída transformada*.
 * -i --in-replace - *Substitui o texto original pelo transformado*.
 
-```
-$ minify -r assets/test.css
-```
-
-O minify recebe até três argumentos; os dois primeiros são obrigatórios: 
+O minify recebe até três argumentos, sendo os dois primeiros obrigatórios: 
 
 ```
 minify <modo-de-operação> <caminho-do-arquivo> <extensão-do-arquivo>
 ```
 
-O último argumento é obrigatório quando o caminho é um diretório, assim o script precisa saber por qual tipo de arquivo buscar e minificar.
+O último argumento é obrigatório quando o caminho é um diretório, assim o script precisa saber por qual tipo de arquivo buscar e minificar:
 
 ```
-$ minify -r assets css
+$ minify -r assets/ css
 ```
 
-Então faça bom uso.
+ou
+
+```
+$ minify -r assets/ js
+```
+
+**Atenção**: O minify ainda não suporta a opção -i para transformar todos os arquivos no nível do diretório, como no exemplo abaixo:
+
+```
+$ minify -i assets/ css
+```
+
+Então é isso. Espero que goste.

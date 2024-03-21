@@ -37,12 +37,13 @@ fi
 # Remove espaços entre caracteres comuns.
 minify_general(){
     FILE_TMP=$1;
-    sed -i -e 's/ {/{/g' -e 's/{ /{/g' -e 's/ } /}/g' -e 's/ }/}/g' -e 's/} /}/g' -e \
-    's/: /:/g' -e 's/; /;/g' -e 's/ # /#/g' -e 's/, /,/g' -e 's/( /(/g' -e 's/ (/(/g' -e \
-    's/) /)/g' -e 's/> />/g' -e 's/ > />/g' -e 's/ < /</g' -e 's/ </</g' -e 's/ \/ /\//g' -e \
-    's/ \//\//g' -e 's/" /"/g' -e 's/= /=/g' -e 's/ =/=/g' -e 's/== /==/g' -e 's/ ==/==/g' -e \
-    's/=> /=>/g' -e 's/ =>/=>/g' -e 's/ +=/+=/g' -e 's/+= /+=/g' -e 's/-= /-=/g' -e \
-    's/ -=/-=/g' $FILE_TMP;
+    sed -i -e 's/ {/{/g' -e 's/{ /{/g' -e 's/ }/}/g' -e 's/} /}/g' -e 's/: /:/g' -e \
+    's/ :/:/g' -e 's/; /;/g' -e 's/ ;/;/g' -e 's/# /#/g' -e 's/ #/#/g' -e 's/, /,/g' -e \
+    's/ ,/,/g' -e 's/( /(/g' -e 's/ (/(/g' -e 's/) /)/g' -e 's/ )/)/g' -e 's/> />/g' -e \
+    's/ >/>/g' -e 's/ </</g' -e 's/< /</g' -e 's/ \//\//g' -e 's/\/ /\//g' -e 's/" /"/g' -e \
+    's/= /=/g' -e 's/ =/=/g' -e 's/= /=/g' -e 's/== /==/g' -e 's/ ==/==/g' -e 's/=> /=>/g' -e \
+    's/ =>/=>/g' -e 's/ +=/+=/g' -e 's/+= /+=/g' -e 's/-= /-=/g' -e 's/ -=/-=/g' -e \
+    's/\[ /\[/g' -e 's/ \]/]/g' $FILE_TMP;
 }
 # Suprime todos os espaços redundantes.
 suprime_spaces(){

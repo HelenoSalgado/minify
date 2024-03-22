@@ -13,7 +13,7 @@ E depois copiá-lo para o diretório de binários do usuário:
 $ sudo cp minify.sh /usr/local/bin/minify.sh && sudo ln -s /usr/local/bin/minify.sh /usr/local/bin/minify
 ```
 
-Eu preferi criar também um link simbólico para chamar o script pelo camando **minify**.  
+Eu preferi criar também um link simbólico para chamar o script pelo comando **minify**.  
 
 ## Como usar?
 

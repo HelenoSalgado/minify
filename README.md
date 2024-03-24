@@ -1,5 +1,6 @@
 # Minifica HTML | CSS | JS
 
+*Este script usa três pacotes Linux: O tr, o sed e o grep. Adicionei alguma lógica e temos um minificador de texto eficiente e fácil de usar*.
 
 Para tornar o script executável a partir de qualquer diretório, basta torná-lo um executável:
 

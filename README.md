@@ -1,4 +1,4 @@
-# Minifica CSS | JS | HTML
+# Minifica HTML | CSS | JS
 
 
 Para tornar o script executável a partir de qualquer diretório, basta torná-lo um executável:

@@ -41,9 +41,9 @@ minify_general(){
     's/ :/:/g' -e 's/; /;/g' -e 's/ ;/;/g' -e 's/# /#/g' -e 's/ #/#/g' -e 's/, /,/g' -e \
     's/ ,/,/g' -e 's/( /(/g' -e 's/ (/(/g' -e 's/) /)/g' -e 's/ )/)/g' -e 's/> />/g' -e \
     's/ >/>/g' -e 's/ </</g' -e 's/< /</g' -e 's/ \//\//g' -e 's/\/ /\//g' -e 's/" /"/g' -e \
-    's/= /=/g' -e 's/ =/=/g' -e 's/= /=/g' -e 's/== /==/g' -e 's/ ==/==/g' -e 's/=> /=>/g' -e \
-    's/ =>/=>/g' -e 's/ +=/+=/g' -e 's/+= /+=/g' -e 's/-= /-=/g' -e 's/ -=/-=/g' -e \
-    's/\[ /\[/g' -e 's/ \]/]/g' $FILE_TMP;
+    "s/' /'/g" -e "s/ '/'/g" -e 's/= /=/g' -e 's/ =/=/g' -e 's/= /=/g' -e 's/== /==/g' -e \
+    's/ ==/==/g' -e 's/=> /=>/g' -e 's/ =>/=>/g' -e 's/ +=/+=/g' -e 's/+= /+=/g' -e \
+    's/-= /-=/g' -e 's/ -=/-=/g' -e 's/\[ /\[/g' -e 's/ \]/]/g' $FILE_TMP;
 }
 # Suprime todos os espaços redundantes.
 suprime_spaces(){
